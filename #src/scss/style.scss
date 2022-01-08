@@ -1,0 +1,33 @@
+@import 'null.scss';
+@import 'fonts.scss';
+@import 'variable.scss';
+@import 'blocks/header.scss';
+@import 'blocks/footer.scss';
+
+/*------------------------*/
+.wrapper{
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.page{
+	flex: 1 1 auto;
+} 
+body.lock {
+	overflow: hidden;
+}
+body{	
+	padding-top: 50px;
+	font-family: 'Conv_gotha-regular';
+	background-color: $bgColor;
+	color: $textColor;
+}
+.container{
+	max-width: 945px;
+	margin: 0px auto;
+}
+.invalid{
+	margin: 5px 0;
+	color: $primary;
+}

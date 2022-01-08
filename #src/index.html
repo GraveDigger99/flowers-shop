@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.min.css"> 
+	<title>Flowers</title>
+</head>
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="page">
+
+		</main>
+		@@include('_footer.html')
+	</div>
+
+	<div id="popup-callback" class="popup-callback">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="#header" class="popup__close close-popup">X</a>
+				<!--Asagida content-->
+				<h2 class="popup-callback__title">Отправьте нам свои контактные данные</h2>
+				<form action="post" class="form-callback popup__form-callback">
+					<input type="text" class="form-callback__input" placeholder="имя *" required name="username" tabindex="1">
+					<input type="text" class="form-callback__input" placeholder="фамилия *" required name="usersurname" tabindex="2">
+					<input type="tel" class="form-callback__input" placeholder="номер *" required name="userphone" tabindex="3">
+					<input type="text" class="form-callback__input" placeholder="электронная почта *" required name="usermail" tabindex="4">
+					<div class="form-callback__bottons">
+						<button class="send">Отправить</button>
+						<button class="cancel">Отменить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/script.js"></script>
+</body> 
+</html>
