@@ -1,3 +1,7 @@
+.header{
+	padding-top: 50px;
+	padding-bottom: 123px;
+}
 .header-row {
 	display: flex;
 	justify-content: space-between;
@@ -23,10 +27,10 @@
 	font-size: 12px;
 	font-weight: 300;
 	letter-spacing: 0.12px;
-	color: $tariffColor;
+	color: $textColorGray;
 	line-height: 16px;
 		&__country {
-			color: $primary;
+			color: $primaryText;
 			font-family: "Conv_gotha-medium";
 		}
 }
@@ -34,19 +38,19 @@
 	text-align: right;
 		&__tariff {
 			margin: 7px 0px 16px 0px;
-			color: $tariffColor;
+			color: $textColorGray;
 			font-size: 12px;
 			letter-spacing: 0.12px;
 		}
 }
 .number {
-	color: $textColor;
+	color: $textColorLight;
 	font-family: "Conv_gotha-medium";
 	font-size: 20px;
 	letter-spacing: 0.2px;
 }
 .callback {
-	color: $primary;
+	color: $primaryText;
 	font-size: 16px;
 	letter-spacing: 0.16px;
 	text-decoration: underline;
@@ -63,6 +67,7 @@
 	overflow-y: auto;
 	overflow-x: hidden;
 	transition: all 0.8s ease 0s;
+	z-index: 100;
 }
 .popup-callback.open {
 	opacity: 1;
@@ -98,7 +103,7 @@
 }
 .popup-callback__title{
 	font-size: 25px;
-	color: $textColor;
+	color: $textColorLight;
 	text-align: center;
 	margin-bottom: 20px;
 }
@@ -114,13 +119,13 @@
 	margin-top: 15px;
 	border: 1px solid gray;
 	padding-left: 20px;
-	border: 1px solid $primary;
+	border: 1px solid $primaryBg;
 }
 .form-callback__input:first-child{
 	margin-top: 0;
 }
 .form-callback__input:focus{
-	border: 3px solid $primary;
+	border: 3px solid $primaryBg;
 }
 .form-callback__bottons{
 	display: flex;
@@ -131,42 +136,30 @@
 .send{
 	display: block;
 	padding: 15px;
-	background-color:$primary;
-	color: $textColor;
+	background-color:$primaryBg;
+	color: $textColorLight;
 	border: 1px solid transparent;
 }
 .cancel{
 	display: block;
 	padding: 15px;
-	background-color:$textColor;
-	border: 1px solid $primary ;
+	background-color:$textColorLight;
+	border: 1px solid $primaryBg ;
 }
 /*--------------------Media------------------------------*/
-@media (max-width:1200px) {
-	.header{
-		padding: 0 15px;	
-	}
-}
+
 /*----------------------992---------------------------------*/
 @media (max-width:992px) {
-	.container{
-		max-width: 750px;
-	}
 	.header{
-		padding: 0;
+		padding-top: 40px;
+		padding-bottom: 60px;
 	}
 }
 /*-----------------------767--------------------------------*/
 
 @media (max-width:767px) {
-	.container{
-		max-width: 576px;
-	}
 	.logo{
 		align-self: flex-start;
-	}
-	.header{
-		padding: 0 8px;
 	}
 	.header-row{
 		flex-wrap: wrap;
@@ -186,6 +179,9 @@
 	.popup__content{
 		max-width: 550px;
 	}
+	.header{
+		padding-top: 30px;
+	}
 }
 /*-----------------------590--------------------------------*/
 @media (max-width:590px) {
@@ -196,18 +192,14 @@
 	.popup-callback__title{
 		font-size: 20px;
 	}
-	.invalid{
-		width: 70%;
+	.header{
+		padding-top: 25px;
+		padding-bottom: 40px;
 	}
 }
 /*-----------------------576--------------------------------*/
 @media (max-width:576px) {
-	.container{
-		max-width: 95%;
-	}
-	body{
-		padding-top: 25px;
-	}
+	
 	.logo{
 		flex-basis: 100%;
 		text-align: center;
@@ -252,9 +244,6 @@
 	.form-callback__bottons{
 		width: 80%;
 	}
-	.invalid{
-		width: 80%;
-	}
 }
 /*-----------------------383--------------------------------*/
 	
@@ -267,10 +256,6 @@
 	}
 	.form-callback__bottons{
 		width: 90%;
-	}
-	.invalid{
-		width: 90%;
-		line-height: 15px;
 	}
 }
 /*-----------------------------------------------------------*/

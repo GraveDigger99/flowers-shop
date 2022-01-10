@@ -3,6 +3,9 @@
 @import 'variable.scss';
 @import 'blocks/header.scss';
 @import 'blocks/footer.scss';
+@import 'blocks/hero.scss';
+@import 'swiper.scss';
+@import 'swiper-bundle.min.scss';
 
 /*------------------------*/
 .wrapper{
@@ -18,10 +21,9 @@ body.lock {
 	overflow: hidden;
 }
 body{	
-	padding-top: 50px;
 	font-family: 'Conv_gotha-regular';
 	background-color: $bgColor;
-	color: $textColor;
+	color: $textColorLight;
 }
 .container{
 	max-width: 945px;
@@ -29,5 +31,31 @@ body{
 }
 .invalid{
 	margin: 5px 0;
-	color: $primary;
+	color: $primaryText;
+}
+
+@media (max-width:1200px) {
+	.container{
+		padding-right: 15px;
+		padding-left: 15px;	
+	}
+}
+@media (max-width:992px) {
+	.container{
+		max-width: 750px;
+	}
+}
+
+@media (max-width:767px) {
+	.container{
+		max-width: 576px;
+		padding-right: 8px;
+		padding-left: 8px;
+	}
+}
+
+@media (max-width:576px) {
+	.container{
+		max-width: 95%;
+	}
 }

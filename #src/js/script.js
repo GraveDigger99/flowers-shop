@@ -1,6 +1,8 @@
-@@include('popup.js')
 @@include('jquery-3.6.0.min.js')
 @@include('jquery.validate.min.js')
+@@include('swiper-bundle.min.js')
+@@include('popup.js')
+@@include('swiper.js')
 
 $('.popup__form-callback').validate({
 	errorClass: 'invalid',
@@ -12,6 +14,6 @@ $('.popup__form-callback').validate({
 		required: "Укажите ваш адрес электронной почты",
 		email: "Ваш адрес электронной почты должен быть в формате имя@домен.com"
     	}
-  	}
-    
+  	}  
 });
+
