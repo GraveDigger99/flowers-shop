@@ -1,5 +1,7 @@
+
 .hero {
 	padding-bottom: 77px;
+	position: relative;
 		&__title {
 			max-width: 658px;
 			margin: 0px auto;
@@ -35,9 +37,48 @@
 	letter-spacing: 0.18px;
 	color: $textColorGray;
 }
-/*----------------Swiper-----------------------*/
 
-/*---------------------------------------------*/
+.hero__discount{
+	color: $textColorGray;
+	font-family: 'Conv_gotha-regular';
+	font-size: 19px;
+	text-align: center;
+	text-transform: uppercase; 
+	margin-bottom: 36px;
+}
+.hero__discount a {
+	font-family: "Conv_gotha-medium";
+	font-weight: 500;
+	letter-spacing: 0.19px;
+	color: $textColorLight;
+}
+.hero__btn{
+	display: block;
+	max-width: 300px;
+	height: 70px;
+	line-height: 70px;
+	color: $textColorLight;
+	background-color: #ff2e55;
+	padding: 0px 30px;
+	font-family: "Conv_gotha-medium";
+	font-size: 18px;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.18px;
+	margin: 0px auto;
+}
+
+.page__hero::after{
+	content:"";
+	position: absolute;
+	bottom: 0;
+	left:0;
+	width: 100%;
+	height: 1px;
+	z-index: 5;
+	background-color:$divider;
+}
 
 @media (max-width:1200px) {
 	.hero__subtitle{
@@ -70,10 +111,21 @@
 	.invalid{
 		width: 80%;
 	}
+	.image-slider{
+		margin-bottom: 40px;
+	}
 }
 @media (max-width:383px) {
 	.invalid{
 		width: 90%;
 		line-height: 15px;
+	}
+}
+@media (max-width:320px) {
+	.hero__discount{
+		line-height: 25px;
+	}
+	.image-slider{
+		margin-bottom: 45px;
 	}
 }

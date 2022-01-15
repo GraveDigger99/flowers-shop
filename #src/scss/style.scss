@@ -4,8 +4,12 @@
 @import 'blocks/header.scss';
 @import 'blocks/footer.scss';
 @import 'blocks/hero.scss';
+@import 'blocks/reviews.scss';
+@import 'blocks/advantages.scss';
+@import 'blocks/goods.scss';
 @import 'swiper.scss';
 @import 'swiper-bundle.min.scss';
+@import 'blocks/offer';
 
 /*------------------------*/
 .wrapper{
@@ -33,6 +37,7 @@ body{
 	margin: 5px 0;
 	color: $primaryText;
 }
+
 
 @media (max-width:1200px) {
 	.container{

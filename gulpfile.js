@@ -9,7 +9,8 @@ let path = {
 		css: project_folder + "/css/",
 		js:project_folder + "/js/",
 		img: project_folder + "/img/",
-		fonts: project_folder + "/fonts/"
+		fonts: project_folder + "/fonts/",
+		php: project_folder + "/php/",
 	},
 	src:{
 		html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"], // bu yazilis ile #src de olan html fayllar dist - de bir index.html kimi gorunecek
@@ -17,15 +18,16 @@ let path = {
 		js:source_folder + "/js/script.js",
 		img: source_folder + "/img/**/*.+(png|jpg|gif|ico|svg|webp)", //    odurki img-nin icinde olan basqa papkalardaki fayllari da gorsun ,  /*{} ise ancaq {} icinde olan bu tip fayllarla islesin
 		//fonts: source_folder + "/fonts/**/*.ttf" // bir tip olduguna gore {} istifade elemedik
-		fonts: source_folder + "/fonts/*.ttf"
+		fonts: source_folder + "/fonts/*.ttf",
+		php: source_folder + "/php/**/*.php",
 	},
 
-	
 	watch:{
 		html: source_folder + "/**/*.html", 
 		css: source_folder + "/scss/**/*.scss", 
 		js:source_folder + "/js/**/*.js",
 		img: source_folder + "/img/**/*.+(png|jpg|gif|ico|svg|webp)", 
+		php: source_folder + "/php/*.php",
 	},
 	clean: "./" + project_folder + "/"
 };
@@ -83,7 +85,7 @@ let{src,dest} = require('gulp'), // gulp hemin papkalara baglanacaq ve senariya 
 				group_media()
 			)
 			.pipe(
-				autoprefixer({
+				autoprefixer({ 
 					overrideBrowserslist: ["last 5 versions"],
 					cascade: true
 				})
@@ -187,9 +189,16 @@ function clean (params){
 		return del(path.clean);
 }
 
-let build = gulp.series(clean,gulp.parallel(js,css,html,images, fonts));
+function php (params){
+	return src(path.src.php)
+		.pipe(dest(path.build.php))
+		.pipe(browsersync.stream());
+}
+
+let build = gulp.series(clean,gulp.parallel(js,css,html,images, fonts,php));
 let watch = gulp.parallel(build,watchFiles,browserSync);
 
+exports.php = php;
 exports.fonts = fonts;
 exports.html = html;
 exports.css = css;

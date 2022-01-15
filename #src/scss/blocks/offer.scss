@@ -1,0 +1,71 @@
+.offer{
+	padding: 100px 0;
+	background-color: #1a1a1a;
+}
+.offer__title{
+	color: $textColorLight;
+	font-family: "Conv_gotha-medium";
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+	margin-bottom: 29px;
+}
+.offer__link{
+	display: block;
+	color: $textColorLight;	
+	font-family: "Conv_gotha-medium";
+	font-size: 30px;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+	position: relative;
+	margin-bottom: 65px;
+}
+.offer__link::after{
+	content:"";
+	position: absolute;
+	bottom:-10px;
+	left: 0;
+	height: 1px;
+	background-color: $textColorLight;
+	width: 100%;
+}
+.offer__variable{
+	display: block;
+	color: $textColorLight;
+	font-family: "Conv_gotha-regular";
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 0.14px;
+	margin-bottom: 22px;
+}
+.offer__number{
+	display: block;
+	text-align: center;
+	font-size: 36px;
+}
+@media (max-width:576px) {
+	.offer__title{
+		font-size: 24px;
+	}
+	.offer__link{
+		font-size: 20px;
+	}
+}
+@media (max-width:320px) {
+	.offer{
+		padding: 20px 0;
+	}
+	.offer__number{
+		font-size: 29px;
+	}
+	.offer__title{
+		font-size: 22px;
+	}
+	.offer__link{
+		line-height: 30px;
+		margin-bottom: 50px;
+	}
+}

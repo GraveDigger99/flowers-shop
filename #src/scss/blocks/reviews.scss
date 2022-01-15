@@ -1,0 +1,126 @@
+.reviews{
+	padding: 100px 0;
+}
+.reviews__title{
+	margin-bottom: 96px;
+	text-align: center;
+}
+.reviews-slider__slide{
+	padding-left: 85px;
+	padding-right: 60px;
+}
+.reviews-slider__image{
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-basis: 220px;
+	flex-shrink: 0;
+	margin-bottom: 25px;
+}
+.reviews-slider__image img{
+	max-width: 100%;
+}
+.reviews-slider__image::after{
+	content:"";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(41,41,41,0.6);
+	border-radius: 50%;
+}
+.reviews-slider__flower{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+.reviews-slider__user{
+	text-align: center;
+	position: relative;
+	z-index: 10;
+	font-size: 20px;
+	font-family: 'Conv_gotha-medium';
+}
+.reviews-slider__user span{
+	font-family: "Conv_gotha-regular";
+	font-size: 18px;
+	letter-spacing: 0.18px;
+}
+.reviews-slider__row{
+	display: flex;
+	align-items: center;
+}
+.reviews-slider__body{
+	flex-basis: 481px;
+	margin-left: 52px;
+}
+.reviews-slider__text{
+	color: #ffffff;
+	font-family: "Conv_gotha-regular";
+	font-size: 18px;
+	text-align: left;
+	letter-spacing: 0.18px;
+	line-height: 20px;
+	margin-bottom: 19px;
+}
+.review-slider__view{
+	color: #f24841;
+	font-family: "Conv_gotha-regular";
+	font-size: 18px;
+	text-align: left;
+	letter-spacing: 0.18px;
+	text-decoration: underline;
+}
+.reviews-slider__button{
+	background-color:inherit;
+}
+
+.reviews-slider .swiper-button-prev::after,
+.reviews-slider .swiper-button-next::after {
+	color: #f24841;
+	font-size: 40px;
+}
+
+@media (max-width:992px) {
+	.reviews-slider__row{
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.reviews-slider__body{
+		flex-grow: 1;
+		margin-left: 0;
+	}
+	.reviews__title{
+		margin-bottom: 40px;
+	}
+	.reviews{
+		padding-top: 70px;
+	}
+	.reviews-slider__slide{
+		padding: 0 30px;
+		height: 450px;
+	}
+	.reviews-slider__slide{
+	padding-left: 85px;
+	padding-right: 60px;
+	}
+}
+
+@media (max-width:320px) {
+	.reviews-slider__image{
+		flex-grow: 1;
+	}
+}

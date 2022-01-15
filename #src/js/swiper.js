@@ -1,3 +1,23 @@
+
+const reviewsSlider = new Swiper('.reviews-slider', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+
+
+
+
+
+
+
 const swiper = new Swiper('.image-slider', {
   // Optional parameters
   direction: 'horizontal', // islemsi ucun image-slider--> e hundurluk verilirmelidi, scrollbar,bullet ve s ekranin saginda yerlesecek
@@ -435,5 +455,9 @@ new Swiper('.parallax-slider', {
 	},
 });
 */
+
+
+
+
 
 
